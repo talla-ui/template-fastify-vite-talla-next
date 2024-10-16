@@ -1,0 +1,33 @@
+{
+  "name": "template-fastify-vite-talla-next",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Template: TypeScript, Node.js, Fastify, Vite, and Tälla UI (unstable)",
+  "type": "module",
+  "scripts": {
+    "predev": "tsc -p tsconfig-server.json",
+    "dev": "conc -c red,blue,green npm:dev:*",
+    "dev:vite": "vite",
+    "dev:tsc": "tsc -w -p tsconfig-server.json",
+    "dev:server": "nodemon build/index.js",
+    "prebuild": "rimraf dist build",
+    "build": "tsc -p tsconfig-server.json && vite build",
+    "start": "node build/index.js"
+  },
+  "license": "MIT",
+  "prettier": {},
+  "dependencies": {
+    "fastify": "4",
+    "@fastify/static": "7"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "concurrently": "latest",
+    "nodemon": "latest",
+    "rimraf": "latest",
+    "typescript": "latest",
+    "vite": "5",
+    "talla-ui": "next",
+    "@talla-ui/web-handler": "next"
+  }
+}
