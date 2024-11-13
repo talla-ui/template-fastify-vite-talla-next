@@ -2,7 +2,9 @@ import { $activity, Activity, app, ui } from "talla-ui";
 import { CountAPI } from "./CountAPI";
 
 const view = ui.cell(
-  ui.label($activity.bind("count"), { fontSize: 40, tabularNums: true }),
+  ui.label($activity.bind("count"), {
+    style: { fontSize: 40, tabularNums: true },
+  }),
   ui.button({
     icon: ui.icon.PLUS,
     accessibleLabel: "Increment counter",
