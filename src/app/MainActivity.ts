@@ -2,15 +2,18 @@ import { $activity, Activity, app, ui } from "talla-ui";
 import { CountAPI } from "./CountAPI";
 
 const view = ui.cell(
-  ui.label($activity("count"), {
-    style: { fontSize: 40, tabularNums: true },
-  }),
-  ui.button({
-    icon: ui.icon.PLUS,
-    accessibleLabel: "Increment counter",
-    onClick: "CountUp",
-    style: ui.style.BUTTON_SUCCESS,
-  })
+  ui.column(
+    { align: "center", distribute: "center" },
+    ui.label($activity("count"), {
+      style: { fontSize: 40, tabularNums: true },
+    }),
+    ui.button({
+      icon: ui.icon.PLUS,
+      accessibleLabel: "Increment counter",
+      onClick: "CountUp",
+      style: ui.style.BUTTON_SUCCESS,
+    })
+  )
 );
 
 export class MainActivity extends Activity {
