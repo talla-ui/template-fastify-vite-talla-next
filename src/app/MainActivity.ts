@@ -3,7 +3,7 @@ import { CountAPI } from "./CountAPI";
 
 const view = ui.cell(
   ui.column(
-    { align: "center", distribute: "center" },
+    { align: "center" },
     ui.label($activity("count"), {
       style: { fontSize: 40, tabularNums: true },
     }),
